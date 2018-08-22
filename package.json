@@ -1,0 +1,19 @@
+{
+  "name": "my-boilerplate",
+  "version": "1.0.0",
+  "description": "UW boilerplate designed for a modern-ish Django stack. CSS framework agnostic. Optimized for critical rendering path. Webpack for bundling the JS framework of your choice.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlon/my-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlon/my-boilerplate/issues"
+  },
+  "homepage": "https://github.com/charlon/my-boilerplate#readme"
+}
