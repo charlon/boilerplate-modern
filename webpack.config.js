@@ -9,10 +9,10 @@ module.exports = {
   context: __dirname,
 
   entry : {
-    react_demo: './scout_clients/static/scout_clients/react/demo',
-    vue_demo: './scout_clients/static/scout_clients/vue/demo',
-    angular_demo: './scout_clients/static/scout_clients/angular/main',
-    classic_demo: './scout_clients/static/scout_clients/classic/main',
+    //react_demo: './scout_clients/static/scout_clients/react/demo',
+    //vue_demo: './scout_clients/static/scout_clients/vue/demo',
+    //angular_demo: './scout_clients/static/scout_clients/angular/main',
+    boilerplate_main: './boilerplate/static/boilerplate/js/main',
   },
 
   optimization: {
@@ -36,7 +36,7 @@ module.exports = {
 	},
 
   output: {
-      path: path.resolve('./scout_clients/static/scout_clients/bundles/'),
+      path: path.resolve('./boilerplate/static/boilerplate/bundles/'),
       filename: "[name]-[hash].js",
   },
 
@@ -49,9 +49,10 @@ module.exports = {
     // for 'WARNING Critical dependency: the request of a dependency is an expression'
     new webpack.ContextReplacementPlugin(
       /(.+)?angular(\\|\/)core(.+)?/,
-      path.resolve('./scout_clients/static/scout_clients/angular'), // location of your angular src
+      path.resolve('./boilerplate/static/boilerplate/angular'), // location of your angular src
       {} // a map of your routes
     )
+    
   ],
 
   module: {
