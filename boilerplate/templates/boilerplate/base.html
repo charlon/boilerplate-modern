@@ -4,14 +4,16 @@
   <head>
     <title>{% block title %}{% endblock %}</title>
 
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
     {% load compress %}
     {% load static %}
     {% load render_bundle from webpack_loader %}
 
     <!-- compressed css and js using django-compressor -->
     {% compress js %}
-    <!--<script defer type="text/javascript" src="{% static "scout_clients/classic/main.js" %}"></script>-->
     {% endcompress %}
+
     {% compress css inline %}
     <link rel="stylesheet" href="{% static "boilerplate/css/bootstrap-reboot.css" %}" type="text/css">
     <link rel="stylesheet" href="{% static "boilerplate/css/main.scss" %}" type="text/x-scss">
@@ -35,8 +37,14 @@
 
         <div class="bp-navigation">
           <div class="bp-wrapper bp-logo" style="background-image: url({% static "boilerplate/img/w-logo-white.png" %})">
-            <div class="bp-title">MyPlan</div>
-            <div class="bp-title-button"></div>
+
+            <div class="bp-title-mobile">
+              <button>xxx</button>
+              <span>MyPlan</span>
+            </div>
+
+            <div class="bp-title-desktop">MyPlan</div>
+
           </div>
         </div>
       </header>

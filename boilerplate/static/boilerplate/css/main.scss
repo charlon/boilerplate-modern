@@ -15,9 +15,11 @@ $bar-height: 40px;
   }
 }
 
+body {   font-family: 'Open Sans', sans-serif; min-width: 320px; }
+
 /** global utils **/
 .bp-wrapper {
-  font-family: 'Open Sans', sans-serif;
+
   margin: 0 auto;
   padding: 0 16px;
 
@@ -26,8 +28,6 @@ $bar-height: 40px;
   }
 
 }
-
-
 
 /** header section **/
 .bp-header { clear: both;
@@ -57,15 +57,33 @@ $bar-height: 40px;
     background: #4b2e83;
     height: $nav-height;
 
-    .bp-title {
+    .bp-title-mobile {
       display: inline-block;
       color: #fff;
       font-size: 26px;
-      font-weight: 400;
+      white-space: nowrap;
       line-height:$nav-height;
       height: $nav-height;
+
+      @include breakpoint(desktop) {
+        display: none;
+      }
     }
 
+    .bp-title-desktop {
+      display: none;
+
+      @include breakpoint(desktop) {
+        display: inline-block;
+        color: #fff;
+        font-size: 26px;
+        font-weight: 400;
+        line-height:$nav-height;
+        height: $nav-height;
+      }
+
+    }
+    
     .bp-logo {
       background-repeat: no-repeat;
       background-size: 45px;
