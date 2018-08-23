@@ -15,7 +15,7 @@ $bar-height: 40px;
   }
 }
 
-body {   font-family: 'Open Sans', sans-serif; min-width: 320px; }
+body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
 
 /** global utils **/
 .bp-wrapper {
@@ -50,6 +50,11 @@ body {   font-family: 'Open Sans', sans-serif; min-width: 320px; }
       color: #fff;
       font-size: 13px;
       float: right;
+
+      ul {
+        list-style: none;
+        li { display: inline-block; margin-left: 10px; }
+      }
     }
   }
 
@@ -58,13 +63,15 @@ body {   font-family: 'Open Sans', sans-serif; min-width: 320px; }
     height: $nav-height;
 
     .bp-title-mobile {
-      display: inline-block;
+      display: block;
       color: #fff;
       font-size: 26px;
       white-space: nowrap;
       line-height:$nav-height;
       height: $nav-height;
 
+      button { padding: 0; margin: 0; }
+      
       @include breakpoint(desktop) {
         display: none;
       }
@@ -74,7 +81,7 @@ body {   font-family: 'Open Sans', sans-serif; min-width: 320px; }
       display: none;
 
       @include breakpoint(desktop) {
-        display: inline-block;
+        display: block;
         color: #fff;
         font-size: 26px;
         font-weight: 400;
@@ -83,7 +90,7 @@ body {   font-family: 'Open Sans', sans-serif; min-width: 320px; }
       }
 
     }
-    
+
     .bp-logo {
       background-repeat: no-repeat;
       background-size: 45px;

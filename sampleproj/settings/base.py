@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    #'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'webpack_loader',
     'compressor',
+    #'bakery',
     'boilerplate',
 ]
 
@@ -134,7 +135,7 @@ STATICFILES_DIRS = [
     #os.path.join(BASE_DIR, '..', "react"),
 ]
 
-#webpack loader (react)
+# webpack loader (react)
 WEBPACK_LOADER = {
     'DEFAULT': {
         'BUNDLE_DIR_NAME': 'boilerplate/bundles/',
@@ -158,3 +159,12 @@ COMPRESS_CSS_FILTERS = [
 COMPRESS_JS_FILTERS = [
     'compressor.filters.jsmin.JSMinFilter',
 ]
+
+
+# bakery
+
+#BUILD_DIR =  os.path.join(BASE_DIR, '/boilerplate/build/')
+
+#BAKERY_VIEWS = (
+#    'boilerplate.views.IndexTemplateView',
+#)

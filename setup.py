@@ -19,7 +19,7 @@ setup(
         'django',
         'django_compressor',
         'django-webpack-loader',
-        'django-bakery',
+        #'django-bakery',
         'libsass',
     ],
     license='Apache License, Version 2.0',
