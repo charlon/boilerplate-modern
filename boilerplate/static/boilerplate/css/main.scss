@@ -1,3 +1,94 @@
-body {
-  background: #666;
+/** variables **/
+$nav-height: 65px;
+$bar-height: 40px;
+
+/** mixins **/
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 1024px) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 768px) and (max-width: 1023px) { @content ; }
+  }
+  @else if $point == mobileonly {
+    @media (max-width: 37.5em)  { @content ; }
+  }
+}
+
+/** global utils **/
+.bp-wrapper {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include breakpoint(desktop) {
+    max-width: 1200px;
+  }
+
+}
+
+
+
+/** header section **/
+.bp-header { clear: both;
+
+  .bp-thin-bar {
+    background: #452a78;
+    line-height: 40px;
+    height: $bar-height;
+    font-size: 14px;
+
+    .bp-user {
+      display: inline-block;;
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .bp-search-links {
+      display: inline-block;
+      text-align: right;
+      color: #fff;
+      font-size: 13px;
+      float: right;
+    }
+  }
+
+  .bp-navigation {
+    background: #4b2e83;
+    height: $nav-height;
+
+    .bp-title {
+      display: inline-block;
+      color: #fff;
+      font-size: 26px;
+      font-weight: 400;
+      line-height:$nav-height;
+      height: $nav-height;
+    }
+
+    .bp-logo {
+      background-repeat: no-repeat;
+      background-size: 45px;
+      background-position: right 20px bottom;
+      height: $nav-height;
+    }
+
+  }
+
+
+}
+
+/** main section **/
+.bp-main {
+  background: #f5f5f5;
+  min-height: calc(100vh - 105px); // bp-thin-bar + bp-navigation height
+
+  @include breakpoint(tablet) {
+
+  }
+
+  @include breakpoint(desktop) {
+    padding: 32px 0;
+  }
+
 }

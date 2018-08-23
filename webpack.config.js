@@ -12,7 +12,7 @@ module.exports = {
     //react_demo: './scout_clients/static/scout_clients/react/demo',
     //vue_demo: './scout_clients/static/scout_clients/vue/demo',
     //angular_demo: './scout_clients/static/scout_clients/angular/main',
-    boilerplate_main: './boilerplate/static/boilerplate/js/main',
+    boilerplate: './boilerplate/static/boilerplate/js/main',
   },
 
   optimization: {
@@ -52,7 +52,7 @@ module.exports = {
       path.resolve('./boilerplate/static/boilerplate/angular'), // location of your angular src
       {} // a map of your routes
     )
-    
+
   ],
 
   module: {
