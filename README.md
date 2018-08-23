@@ -23,8 +23,8 @@ Setup
 
 1. Clone the repository
 
-        $ git clone https://github.com/charlon/scout-modern.git
-        $ cd scout-modern
+        $ git clone https://github.com/charlon/boilerplate-modern.git
+        $ cd boilerplate-modern
 
 Node
 ----
