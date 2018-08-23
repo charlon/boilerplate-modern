@@ -65,13 +65,14 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
     .bp-title-mobile {
       display: block;
       color: #fff;
-      font-size: 26px;
+      font-size: 18px;
       white-space: nowrap;
       line-height:$nav-height;
       height: $nav-height;
 
       button { padding: 0; margin: 0; }
-      
+      .bp-title-button { font-size: 14px; color: #ccc; vertical-align: middle; margin-top: -5px;  }
+
       @include breakpoint(desktop) {
         display: none;
       }

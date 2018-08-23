@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="{% static "boilerplate/css/main.scss" %}" type="text/x-scss">
     {% endcompress %}
 
+    <!-- fontawesome svg -->
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+
     <!-- load bundled vendor files using webpack loader -->
     {% render_bundle 'boilerplate' attrs='defer' %}
 
@@ -30,12 +33,12 @@
       <header role="banner" class="bp-header">
         <div class="bp-thin-bar">
           <div class="bp-wrapper">
-            <div class="bp-user">charlon</div>
+            <div class="bp-user"><i class="fas fa-user"></i>&nbsp;&nbsp;charlon</div>
             <div class="bp-search-links">
               <ul>
                 <li>MyUW</li>
                 <li>UW.edu</li>
-                <li>Help</li>
+                <li><i class="fas fa-question-circle"></i>&nbsp;Help</li>
               </ul>
             </div>
           </div>
@@ -45,7 +48,12 @@
           <div class="bp-wrapper bp-logo" style="background-image: url({% static "boilerplate/img/w-logo-white.png" %})">
 
             <div class="bp-title-mobile">
-              <button>xxx</button>
+              <button>
+                <span class="fa-stack fa-2x bp-title-button" aria-hidden="true">
+                  <i class="far fa-square fa-stack-2x"></i>
+                  <i class="fa fa-bars fa-stack-1x"></i>
+                </span>
+              </button>
               <span>MyPlan</span>
             </div>
 
