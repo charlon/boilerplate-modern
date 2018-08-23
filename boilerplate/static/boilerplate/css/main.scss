@@ -17,7 +17,14 @@ $bar-height: 40px;
 
 body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
 
-/** global utils **/
+/** utilities ***/
+
+.bp-slide {
+  background: yellow !important;
+}
+
+
+/** global elements **/
 .bp-wrapper {
 
   margin: 0 auto;
@@ -28,6 +35,8 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
   }
 
 }
+
+
 
 /** header section **/
 .bp-header { clear: both;
@@ -44,7 +53,7 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
       font-size: 13px;
     }
 
-    .bp-search-links {
+    .bp-links {
       display: inline-block;
       text-align: right;
       color: #fff;
@@ -58,7 +67,7 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
     }
   }
 
-  .bp-navigation {
+  .bp-masthead {
     background: #4b2e83;
     height: $nav-height;
 
@@ -70,12 +79,13 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
       line-height:$nav-height;
       height: $nav-height;
 
-      button { padding: 0; margin: 0; }
-      .bp-title-button { font-size: 14px; color: #ccc; vertical-align: middle; margin-top: -5px;  }
+      .bp-title-button  { padding: 0; margin: 0; background: none; border: none; }
+      .bp-title-button-icon { font-size: 14px; color: #ccc; vertical-align: middle; margin-top: -5px;}
 
       @include breakpoint(desktop) {
         display: none;
       }
+
     }
 
     .bp-title-desktop {
@@ -102,6 +112,15 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
   }
 
 
+}
+
+/** nav menu ***/
+.bp-navigation-mobile {
+  background: #f5f5f5;
+
+  ul { margin: 0; padding: 0; list-style: none;
+    li { margin: 0; padding: 0; }
+  }
 }
 
 /** main section **/

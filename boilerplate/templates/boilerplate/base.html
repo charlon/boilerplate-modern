@@ -20,7 +20,7 @@
     {% endcompress %}
 
     <!-- fontawesome svg -->
-    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous" defer></script>
 
     <!-- load bundled vendor files using webpack loader -->
     {% render_bundle 'boilerplate' attrs='defer' %}
@@ -34,7 +34,7 @@
         <div class="bp-thin-bar">
           <div class="bp-wrapper">
             <div class="bp-user"><i class="fas fa-user"></i>&nbsp;&nbsp;charlon</div>
-            <div class="bp-search-links">
+            <div class="bp-links">
               <ul>
                 <li>MyUW</li>
                 <li>UW.edu</li>
@@ -44,12 +44,12 @@
           </div>
         </div>
 
-        <div class="bp-navigation">
+        <div class="bp-masthead">
           <div class="bp-wrapper bp-logo" style="background-image: url({% static "boilerplate/img/w-logo-white.png" %})">
 
             <div class="bp-title-mobile">
-              <button>
-                <span class="fa-stack fa-2x bp-title-button" aria-hidden="true">
+              <button class="bp-title-button" id="nav_button">
+                <span class="fa-stack fa-2x bp-title-button-icon" aria-hidden="true">
                   <i class="far fa-square fa-stack-2x"></i>
                   <i class="fa fa-bars fa-stack-1x"></i>
                 </span>
@@ -63,6 +63,15 @@
         </div>
       </header>
 
+      <div id="myDIV" class="bp-navigation-mobile">
+        <div class="bp-wrapper">
+          <ul>
+            <li>Search Courses</li>
+            <li>Find Programs</li>
+            <li>Degree Audit</li>
+          </ul>
+        </div>
+      </div>
 
       <main role="main" class="bp-main">
         <div class="bp-wrapper">
