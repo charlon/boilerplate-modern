@@ -15,7 +15,7 @@
     {% endcompress %}
 
     {% compress css inline %}
-    <link rel="stylesheet" href="{% static "boilerplate/css/bootstrap-reboot.css" %}" type="text/css">
+    <!--<link rel="stylesheet" href="{% static "boilerplate/css/bootstrap-reboot.css" %}" type="text/css">-->
     <link rel="stylesheet" href="{% static "boilerplate/css/main.scss" %}" type="text/x-scss">
     {% endcompress %}
 
@@ -25,6 +25,8 @@
     <!-- load bundled vendor files using webpack loader -->
     {% render_bundle 'boilerplate' attrs='defer' %}
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
   </head>
   <body>
 
@@ -32,7 +34,7 @@
 
       <header role="banner" class="bp-header">
         <div class="bp-thin-bar">
-          <div class="bp-wrapper">
+          <div class="bp-container">
             <div class="bp-user"><i class="fas fa-user"></i>&nbsp;&nbsp;charlon</div>
             <div class="bp-links">
               <ul>
@@ -44,8 +46,9 @@
           </div>
         </div>
 
+
         <div class="bp-masthead">
-          <div class="bp-wrapper bp-logo" style="background-image: url({% static "boilerplate/img/w-logo-white.png" %})">
+          <div class="bp-container bp-logo" style="background-image: url({% static "boilerplate/img/w-logo-white.png" %})">
 
             <div class="bp-title-mobile">
               <button class="bp-title-button" id="nav_button">
@@ -63,21 +66,31 @@
         </div>
       </header>
 
-      <div id="nav_menu" role="navigation" class="bp-navigation">
-        <div class="bp-wrapper">
-          <ul>
-            <li>Search Courses</li>
-            <li>Find Programs</li>
-            <li>Degree Audit</li>
-          </ul>
+      <div class="bp-body">
+        <div class="bp-container">
+
+          <div id="nav_menu" role="navigation" class="bp-navigation u-slide">
+            <ul>
+              <li><a href="#" class="u-active"><i class="fas fa-home"></i> Home</a></li>
+              <li><a href="#"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
+              <li><a href="#"><i class="fas fa-school"></i> Programs</a></li>
+              <li><a href="#"><i class="fas fa-graduation-cap"></i> Degree Audit</a></li>
+            </ul>
+            <ul>
+              <li><a href="#"><i class="fas fa-shopping-basket"></i> Registration</a></li>
+              <li><a href="#"><i class="fas fa-bookmark"></i> Bookmarks</a></li>
+            </ul>
+            </ul>
+          </div>
+
+          <main role="main" class="bp-main">
+            <div class="bp-bootstrap">
+            {% block content %}{% endblock %}
+            </div>
+          </main>
+
         </div>
       </div>
-
-      <main role="main" class="bp-main">
-        <div class="bp-wrapper">
-        {% block content %}{% endblock %}
-        </div>
-      </main>
 
     </section>
 

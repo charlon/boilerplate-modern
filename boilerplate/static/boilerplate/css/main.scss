@@ -19,13 +19,21 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
 
 /** utilities ***/
 
-.bp-slide-down {
+.u-slide { max-height: 0;   transition: max-height 0.5s ease-in-out; overflow: hidden;
+  @include breakpoint(desktop) {
+    max-height: unset; // unset 0 height to show contents by default on desktop
+  }
+}
+.u-slide-down {
   max-height: 1000px !important;
 }
 
+.u-active { background: #ddd; color: #7b59b3 !important;
+  svg { color: #452a78 !important; }
+}
 
 /** global elements **/
-.bp-wrapper {
+.bp-container {
 
   margin: 0 auto;
   padding: 0 16px;
@@ -33,9 +41,15 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
   @include breakpoint(desktop) {
     max-width: 1200px;
   }
-
 }
 
+.bp-bootstrap {
+
+  @include breakpoint(desktop) {
+    width: calc(100vw - 300px);
+  }
+
+}
 
 
 /** header section **/
@@ -62,7 +76,7 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
 
       ul {
         list-style: none;
-        li { display: inline-block; margin-left: 10px; }
+        li { display: inline-block; margin-left: 8px; }
       }
     }
   }
@@ -111,39 +125,56 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
 
   }
 
+}
+
+/** body section **/
+.bp-body { background: #f5f5f5; padding-bottom: 16px;
+
+    @include breakpoint(desktop) {
+      .bp-container {
+        padding-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
 
 }
 
 /** nav menu ***/
-.bp-navigation {
-  background: #f5f5f5;
-  transition: max-height 0.5s ease-in-out;
-  overflow: hidden;
-  max-height: 0;
-  border-bottom: solid 1px #ddd;
-
-  ul { margin: 0; padding: 0; list-style: none;
-    li { margin: 0; padding: 0; }
-  }
+.bp-navigation { font-size: 16px;
 
   @include breakpoint(desktop) {
-    padding: 32px 0;
-    max-height: unset;
+    width: 200px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex: 0 1 auto;
+  }
+
+  ul { margin: 0; padding: 0; list-style: none;   border-bottom: solid 1px #ddd;
+    li { margin: 0; padding: 0; line-height: 30px; margin-bottom: 10px;
+
+      &:first-child { margin-top: 10px;
+        @include breakpoint(desktop) { margin-top: 0; }
+      }
+
+      a { display: block; padding-left: 8px; color: #333; font-weight: lighter;
+        svg { margin-right: 8px; }
+      }
+    }
   }
 
 }
 
 /** main section **/
-.bp-main {
-  background: #f5f5f5;
-  min-height: calc(100vh - 105px); // bp-thin-bar + bp-navigation height
-
-  @include breakpoint(tablet) {
-
-  }
+.bp-main { min-height: calc(100vh - 105px); // bp-thin-bar + bp-navigation height
 
   @include breakpoint(desktop) {
-    padding: 32px 0;
+    margin-left: 16px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex: 1 1 auto;
   }
 
 }
