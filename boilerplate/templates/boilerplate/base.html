@@ -35,12 +35,12 @@
       <header role="banner" class="bp-header">
         <div class="bp-thin-bar">
           <div class="bp-container">
-            <div class="bp-user"><i class="fas fa-user"></i>&nbsp;&nbsp;charlon</div>
+            <div class="bp-user"><i class="fas fa-user"></i>&nbsp;&nbsp;netid</div>
             <div class="bp-links">
               <ul>
-                <li>MyUW</li>
-                <li>UW.edu</li>
-                <li><i class="fas fa-question-circle"></i>&nbsp;Help</li>
+                <li><i class="fas fa-external-link-alt"></i> Link</li>
+                <li><i class="fas fa-external-link-alt"></i> Link</li>
+                <li><i class="fas fa-question-circle"></i> Help</li>
               </ul>
             </div>
           </div>
@@ -57,10 +57,10 @@
                   <i class="fa fa-bars fa-stack-1x"></i>
                 </span>
               </button>
-              <span>MyPlan</span>
+              <span>MyApplication</span>
             </div>
 
-            <div class="bp-title-desktop">MyPlan</div>
+            <div class="bp-title-desktop">MyApplication</div>
 
           </div>
         </div>
@@ -70,23 +70,31 @@
         <div class="bp-container">
 
           <div id="nav_menu" role="navigation" class="bp-navigation u-slide">
-            <ul>
+            <ul class="bp-menu">
               <li><a href="#" class="u-active"><i class="fas fa-home"></i> Home</a></li>
-              <li><a href="#"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
-              <li><a href="#"><i class="fas fa-school"></i> Programs</a></li>
-              <li><a href="#"><i class="fas fa-graduation-cap"></i> Degree Audit</a></li>
+              <li><a href="#"><i class="fas fa-link"></i> Item</a></li>
+              <li><a href="#"><i class="fas fa-link"></i> Item</a></li>
+              <li><a href="#"><i class="fas fa-link"></i> Item</a></li>
+              <li><hr role="separator"/></li>
+              <li><a href="#"><i class="fas fa-link"></i> Item</a></li>
+              <li><a href="#"><i class="fas fa-link"></i> Item</a></li>
             </ul>
-            <ul>
-              <li><a href="#"><i class="fas fa-shopping-basket"></i> Registration</a></li>
-              <li><a href="#"><i class="fas fa-bookmark"></i> Bookmarks</a></li>
-            </ul>
-            </ul>
+            <div class="bp-welcome">
+              <p>Welcome to Boilerplate Modern!</p>
+            </div>
           </div>
 
           <main role="main" class="bp-main">
-            <div class="bp-bootstrap">
+
+            <div class="bp-ticker">
+              this is the ticker
+            </div>
+
+            <!-- js framework components are rendered here via webpack_loader -->
+            <div class="bp-components">
             {% block content %}{% endblock %}
             </div>
+
           </main>
 
         </div>

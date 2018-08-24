@@ -7,6 +7,9 @@ $bar-height: 40px;
   @if $point == desktop {
     @media (min-width: 1024px) { @content ; }
   }
+  @else if $point == largedesktop {
+    @media (min-width: 1200px) { @content ; }
+  }
   @else if $point == tablet {
     @media (min-width: 768px) and (max-width: 1023px) { @content ; }
   }
@@ -43,13 +46,6 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
   }
 }
 
-.bp-bootstrap {
-
-  @include breakpoint(desktop) {
-    width: calc(100vw - 300px);
-  }
-
-}
 
 
 /** header section **/
@@ -151,7 +147,22 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
     flex: 0 1 auto;
   }
 
-  ul { margin: 0; padding: 0; list-style: none;   border-bottom: solid 1px #ddd;
+  // only show the welcome container on desktop
+  .bp-welcome { display: none;
+
+    @include breakpoint(desktop) {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.05);
+      padding: 16px;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+
+  }
+  .bp-menu { }
+
+  ul { margin: 0; padding: 0; list-style: none;
+
     li { margin: 0; padding: 0; line-height: 30px; margin-bottom: 10px;
 
       &:first-child { margin-top: 10px;
@@ -162,19 +173,42 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
         svg { margin-right: 8px; }
       }
     }
+
   }
 
 }
 
+
+
+
 /** main section **/
-.bp-main { min-height: calc(100vh - 105px); // bp-thin-bar + bp-navigation height
+.bp-main {
+
+   min-height: calc(100vh - 105px); // bp-thin-bar + bp-navigation height
 
   @include breakpoint(desktop) {
-    margin-left: 16px;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
     flex: 1 1 auto;
+
+    margin-left: 16px;
+  }
+
+  .bp-ticker {
+    background: #eee;
+  }
+
+  .bp-components { outline: dashed 1px red;
+
+    @include breakpoint(desktop) {
+      max-width: calc(100vw - 248px);
+    }
+
+    @include breakpoint(largedesktop) {
+    max-width: 952px;
+    }
+
   }
 
 }
