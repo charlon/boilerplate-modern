@@ -15,16 +15,17 @@
     {% endcompress %}
 
     {% compress css inline %}
-    <!--<link rel="stylesheet" href="{% static "boilerplate/css/bootstrap-reboot.css" %}" type="text/css">-->
+    <link rel="stylesheet" href="{% static "boilerplate/css/bootstrap-reboot.css" %}" type="text/css">
     <link rel="stylesheet" href="{% static "boilerplate/css/main.scss" %}" type="text/x-scss">
     {% endcompress %}
 
-    <!-- fontawesome svg -->
+    <!-- fontawesome svg - deferred -->
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous" defer></script>
 
-    <!-- load bundled vendor files using webpack loader -->
+    <!-- load bundled boilerplate files using webpack loader - deferred -->
     {% render_bundle 'boilerplate' attrs='defer' %}
 
+    <!-- load full bootstrap css - deferred/async -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   </head>
