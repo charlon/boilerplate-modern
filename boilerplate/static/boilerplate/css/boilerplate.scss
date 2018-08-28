@@ -182,7 +182,7 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
 
 
 /** main section **/
-.bp-main {
+.bp-main { outline: dashed 1px red;
 
    min-height: calc(100vh - 105px); // bp-thin-bar + bp-navigation height
 
@@ -196,10 +196,11 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
   }
 
   .bp-ticker {
-    background: #eee;
+    background: #ddd;
+    margin-bottom: 16px;
   }
 
-  .bp-components { outline: dashed 1px red;
+  .bp-components {
 
     @include breakpoint(desktop) {
       max-width: calc(100vw - 248px);

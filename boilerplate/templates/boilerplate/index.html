@@ -7,73 +7,28 @@
 
 {% block content %}
 
-<p>Components (React/Vue) should only be implemented in the "bp-components" container.
-  Using Webpack - you have the ability to use any Javascript framework you choose.
-  Regardless of the framework, you should always be rendering Bootstrap (styled) components.</p>
+<div class="bp-ticker">
 
-<div class="card-columns">
+  <p>this is the ticker container... create a custom ticker component fore reusability.</p>
 
-  <div class="card shadow-sm">
-    <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title that wraps to a new line</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
+  <div style="border:solid 1px black; width:150px; padding:16px; font-size:11px; display:inline-block; margin-right:8px;">
+    make a tickker component
   </div>
-  <div class="card p-3 shadow-sm">
-    <blockquote class="blockquote mb-0 card-body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="blockquote-footer">
-        <small class="text-muted">
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </small>
-      </footer>
-    </blockquote>
+  <div style="border:solid 1px black; width:150px; padding:16px; font-size:11px; display:inline-block; margin-right:8px;">
+    make a tickker component
   </div>
-  <div class="card shadow-sm">
-    <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card bg-primary text-white text-center p-3 shadow-sm">
-    <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-      <footer class="blockquote-footer">
-        <small>
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </small>
-      </footer>
-    </blockquote>
-  </div>
-  <div class="card text-center shadow-sm">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card shadow-sm">
-    <img class="card-img" src="https://via.placeholder.com/300x200" alt="Card image">
-  </div>
-  <div class="card p-3 text-right shadow-sm">
-    <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="blockquote-footer">
-        <small class="text-muted">
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </small>
-      </footer>
-    </blockquote>
-  </div>
-  <div class="card shadow-sm">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
+
+</div>
+
+<!-- js framework components are rendered here via webpack_loader -->
+<div class="bp-components">
+
+  <p>Components (React/Vue) should only be implemented in the "bp-components" container.
+    Using Webpack - you have the ability to use any Javascript framework you choose.
+    Regardless of the framework, you should always be rendering Bootstrap (styled) components.</p>
+
+  <div style="border:solid 1px black; width:300px; padding:32px;">
+    make a card component
   </div>
 
 </div>
