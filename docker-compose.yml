@@ -9,6 +9,7 @@ services:
     volumes:
       - ./sampleproj:/app/sampleproj
       - ./boilerplate:/app/boilerplate
+      - ./myuw:/app/myuw
       - ./webpack-stats.json:/app/webpack-stats.json
     ports:
       - "8000:8000"
