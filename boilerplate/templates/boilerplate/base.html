@@ -22,7 +22,10 @@
     <!-- fontawesome svg - deferred -->
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous" defer></script>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <!-- load bundled boilerplate files using webpack loader - deferred -->
+    {% render_bundle 'vendor' attrs='defer' %}
     {% render_bundle 'boilerplate' attrs='defer' %}
 
   </head>

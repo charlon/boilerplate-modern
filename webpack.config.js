@@ -9,10 +9,8 @@ module.exports = {
   context: __dirname,
 
   entry : {
-    //react_demo: './scout_clients/static/scout_clients/react/demo',
-    //vue_demo: './scout_clients/static/scout_clients/vue/demo',
-    //angular_demo: './scout_clients/static/scout_clients/angular/main',
     boilerplate: './boilerplate/static/boilerplate/js/main',
+    home: './myuw/static/containers/home',
   },
 
   optimization: {
@@ -36,7 +34,7 @@ module.exports = {
 	},
 
   output: {
-      path: path.resolve('./boilerplate/static/boilerplate/bundles/'),
+      path: path.resolve('./boilerplate/static/bundles/'),
       filename: "[name]-[hash].js",
   },
 
