@@ -10,7 +10,7 @@ module.exports = {
 
   entry : {
     boilerplate: './boilerplate/static/boilerplate/js/main',
-    home: './myuw/static/containers/home',
+    home: './myuw/static/home/',
   },
 
   optimization: {
