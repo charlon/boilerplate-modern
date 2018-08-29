@@ -1,0 +1,16 @@
+{% extends "boilerplate/base.html" %}
+
+{% load static %}
+{% load render_bundle from webpack_loader %}
+
+{% block title %}Teaching{% endblock %}
+
+
+{% block content %}
+
+<div id="teaching"></div>
+
+<!-- load bundled react files using webpack loader -->
+{% render_bundle 'teaching' %}
+
+{% endblock %}

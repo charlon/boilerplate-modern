@@ -11,6 +11,7 @@ module.exports = {
   entry : {
     boilerplate: './boilerplate/static/boilerplate/js/main',
     home: './myuw/static/home/',
+    teaching: './myuw/static/teaching/',
   },
 
   optimization: {
