@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardText, CardBody,
   CardTitle, CardSubtitle } from 'reactstrap';
 
-export class Example extends React.Component {
+export class ExampleCard extends React.Component {
  render() {
 
    return (
