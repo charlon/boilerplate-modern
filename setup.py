@@ -19,8 +19,9 @@ setup(
         'django',
         'django_compressor',
         'django-webpack-loader',
-        #'django-bakery',
+        'requests',
         'libsass',
+        'ujson'
     ],
     license='Apache License, Version 2.0',
     description='A Django app to ...',

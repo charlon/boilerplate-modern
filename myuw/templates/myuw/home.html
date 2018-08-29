@@ -1,0 +1,30 @@
+{% extends "boilerplate/base.html" %}
+
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+
+<div class="bp-ticker">
+
+  <div style="border-left:solid 1px black; width:150px; padding-left:16px; font-size:11px; display:inline-block; margin-right:8px;">
+    make a tickker component
+  </div>
+  <div style="border-left:solid 1px black; width:150px; padding-left:16px; font-size:11px; display:inline-block; margin-right:8px;">
+    make a tickker componentss
+  </div>
+
+</div>
+
+<!-- js framework components are rendered here via webpack_loader -->
+<div class="bp-components">
+
+  <div style="border:solid 1px black; width:300px; padding:32px;">
+    make a card component
+  </div>
+
+</div>
+
+{% endblock %}

@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'webpack_loader',
     'compressor',
-    #'bakery',
     'boilerplate',
+    'myuw'
 ]
 
 MIDDLEWARE = [
