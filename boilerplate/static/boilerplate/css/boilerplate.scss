@@ -18,7 +18,7 @@ $bar-height: 40px;
   }
 }
 
-body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
+body { min-width: 320px; }
 
 /** utilities ***/
 
@@ -32,7 +32,7 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
 }
 
 .u-active { background: #ddd; color: #7b59b3 !important;
-  svg { color: #452a78 !important; }
+  i { color: #452a78 !important; }
 }
 
 /** global elements **/
@@ -170,7 +170,7 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
       }
 
       a { display: block; padding-left: 8px; color: #333; font-weight: lighter;
-        svg { margin-right: 8px; }
+        i { margin-right: 8px; }
       }
     }
 
@@ -182,7 +182,7 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
 
 
 /** main section **/
-.bp-main { 
+.bp-main {
 
    min-height: calc(100vh - 105px); // bp-thin-bar + bp-navigation height
 
