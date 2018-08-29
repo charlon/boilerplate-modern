@@ -1,6 +1,6 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import FirstComponent from './FirstComponent'
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import FirstComponent from './FirstComponent';
 
 ReactDOM.render(
 <div>

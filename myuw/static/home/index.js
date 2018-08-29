@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styles from './home.css';
 
-import { Example } from '../components/example';
+import { Example } from './Example';
 
 console.log("I am React!")
 
