@@ -18,20 +18,26 @@
 
 .myuw-ticker {
 
-  background: #ddd;
   margin-bottom: 16px;
 
   .myuw-ticker-left {
-    outline: dashed 1px yellow;
     display: inline-block;
     width: 25%;
   }
 
   .myuw-ticker-right {
-    outline: dashed 1px lime;
     display: inline-block;
     width: 75%;
     text-align: right;
+  }
+
+  .myuw-ticker-card {
+    font-size: 10px;
+    width: 100px;
+    display: inline-block;
+    border-left: solid 1px #aaa;
+    text-align: left;
+    padding-left: 8px;
   }
 
 }
