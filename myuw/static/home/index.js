@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import ExampleCard from './ExampleCard';
 
 import './home.scss';
-
-import { ExampleCard } from './ExampleCard';
 
 ReactDOM.render(
   <div>
