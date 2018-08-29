@@ -80,7 +80,6 @@ module.exports = {
                   loader: MiniCssExtractPlugin.loader,
                   options: {
                     // you can specify a publicPath here
-                    // by default it use publicPath in webpackOptions.output
                     publicPath: './boilerplate/static/bundles/'
                   }
                 },

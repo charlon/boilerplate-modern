@@ -5,12 +5,14 @@
 
 {% block title %}Home{% endblock %}
 
+{% block bundle_css %}
+{% render_bundle 'home' 'css' %}
+{% endblock %}
 
 {% block content %}
 
 <div id="home"></div>
 
-<!-- load bundled react files using webpack loader -->
-{% render_bundle 'home' %}
-
+<!-- load bundled home js files -->
+{% render_bundle 'home' 'js' %}
 {% endblock %}

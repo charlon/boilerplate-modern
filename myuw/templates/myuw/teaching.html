@@ -5,12 +5,14 @@
 
 {% block title %}Teaching{% endblock %}
 
+{% block bundle_css %}
+{% render_bundle 'teaching' 'css' %}
+{% endblock %}
 
 {% block content %}
 
 <div id="teaching"></div>
 
-<!-- load bundled react files using webpack loader -->
-{% render_bundle 'teaching' %}
-
+<!-- load bundled teaching js files -->
+{% render_bundle 'teaching' 'js' %}
 {% endblock %}

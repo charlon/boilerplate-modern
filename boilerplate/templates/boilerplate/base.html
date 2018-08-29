@@ -10,22 +10,15 @@
     {% load static %}
     {% load render_bundle from webpack_loader %}
 
-    <!-- compressed css and js using django-compressor -->
-    {% compress js %}
-    {% endcompress %}
-
-    <!-- fontawesome -->
+    <!-- fontawesome & bootstrap -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <!-- bootstrap 4 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    {% render_bundle 'boilerplate' 'css' %}
+    {% block bundle_css %}{% endblock %}
 
-    <!-- load bundled boilerplate files using webpack loader - deferred -->
+    <!-- vendors & boilerplate - deferred -->
     {% render_bundle 'vendor' attrs='defer' %}
-    {% render_bundle 'boilerplate' attrs='defer' %}
-
-    {% compress css inline %}
-    <link rel="stylesheet" href="{% static "boilerplate/css/boilerplate.scss" %}" type="text/x-scss">
-    {% endcompress %}
+    {% render_bundle 'boilerplate' 'js' attrs='defer' %}
 
   </head>
   <body>
