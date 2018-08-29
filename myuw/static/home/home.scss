@@ -1,3 +1,19 @@
+/** mixins **/
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 1024px) { @content ; }
+  }
+  @else if $point == largedesktop {
+    @media (min-width: 1200px) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 768px) and (max-width: 1023px) { @content ; }
+  }
+  @else if $point == mobileonly {
+    @media (max-width: 37.5em)  { @content ; }
+  }
+}
+
 .card { width: 300px; }
 
 .myuw-ticker {
@@ -6,15 +22,29 @@
   margin-bottom: 16px;
 
   .myuw-ticker-left {
-    outline: solid 1px yellow;
+    outline: dashed 1px yellow;
     display: inline-block;
     width: 25%;
   }
 
   .myuw-ticker-right {
-    outline: solid 1px lime;
+    outline: dashed 1px lime;
     display: inline-block;
     width: 75%;
     text-align: right;
   }
+
+}
+
+
+.myuw-home { outline: dashed 1px red;
+
+  @include breakpoint(desktop) {
+    max-width: calc(100vw - 248px);
+  }
+
+  @include breakpoint(largedesktop) {
+  max-width: 952px;
+  }
+
 }

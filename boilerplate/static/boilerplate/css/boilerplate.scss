@@ -182,7 +182,7 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
 
 
 /** main section **/
-.bp-main { outline: dashed 1px red;
+.bp-main { 
 
    min-height: calc(100vh - 105px); // bp-thin-bar + bp-navigation height
 
@@ -193,18 +193,6 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
     flex: 1 1 auto;
 
     margin-left: 16px;
-  }
-
-  .bp-components {
-
-    @include breakpoint(desktop) {
-      max-width: calc(100vw - 248px);
-    }
-
-    @include breakpoint(largedesktop) {
-    max-width: 952px;
-    }
-
   }
 
 }

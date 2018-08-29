@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require('webpack');
 const BundleTracker = require('webpack-bundle-tracker');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 
@@ -40,8 +41,17 @@ module.exports = {
   },
 
   plugins: [
-    new BundleTracker({filename: './webpack-stats.json'}),
+    new BundleTracker({
+      filename: './webpack-stats.json'
+    }),
     new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "[name]-[hash].css",
+      //chunkFilename: "[id].css"
+    })
+
   ],
 
   module: {
@@ -65,7 +75,18 @@ module.exports = {
           },
           {
               test: /\.(css|scss)$/,
-              loaders: ['style-loader', 'css-loader', 'sass-loader']
+              use: [
+                {
+                  loader: MiniCssExtractPlugin.loader,
+                  options: {
+                    // you can specify a publicPath here
+                    // by default it use publicPath in webpackOptions.output
+                    publicPath: './boilerplate/static/bundles/'
+                  }
+                },
+                "css-loader",
+                "sass-loader"
+              ]
           }
       ]
   },

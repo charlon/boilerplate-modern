@@ -17,7 +17,9 @@ ReactDOM.render(
       </div>
     </div>
 
-    <div className="bp-components">
+    <div className="myuw-home">
+      <ExampleCard />
+      <ExampleCard />
       <ExampleCard />
     </div>
 
