@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import styles from './home.css';
+import './home.scss';
 
 import { ExampleCard } from './ExampleCard';
 
-console.log("I am React!")
-
 ReactDOM.render(
   <div>
-    <div className="bp-ticker">
-      <div>
-        make a tickker component
+    <div className="myuw-ticker">
+      <div className="myuw-ticker-left">
+        <div className="">make a tickker component</div>
       </div>
-      <div>
-        make a tickker component
+      <div className="myuw-ticker-right">
+        <div>make a tickker component</div>
+        <div>make a tickker component</div>
+        <div>make a tickker component</div>
       </div>
     </div>
 

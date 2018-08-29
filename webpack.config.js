@@ -1,7 +1,7 @@
-const path = require("path")
-const webpack = require('webpack')
-const BundleTracker = require('webpack-bundle-tracker')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const path = require("path");
+const webpack = require('webpack');
+const BundleTracker = require('webpack-bundle-tracker');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
 
@@ -40,18 +40,8 @@ module.exports = {
   },
 
   plugins: [
-
     new BundleTracker({filename: './webpack-stats.json'}),
     new VueLoaderPlugin(),
-
-    // Temporary Fix for issue: https://github.com/angular/angular/issues/11580
-    // for 'WARNING Critical dependency: the request of a dependency is an expression'
-    new webpack.ContextReplacementPlugin(
-      /(.+)?angular(\\|\/)core(.+)?/,
-      path.resolve('./boilerplate/static/boilerplate/angular'), // location of your angular src
-      {} // a map of your routes
-    )
-
   ],
 
   module: {
@@ -74,8 +64,8 @@ module.exports = {
               }
           },
           {
-              test: /\.(css|scss|less)/,
-              loaders: ['style-loader', 'css-loader', 'sass-loader', 'less-loader']
+              test: /\.(css|scss)$/,
+              loaders: ['style-loader', 'css-loader', 'sass-loader']
           }
       ]
   },

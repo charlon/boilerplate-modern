@@ -195,11 +195,6 @@ body { font-family: 'Open Sans', sans-serif; min-width: 320px; }
     margin-left: 16px;
   }
 
-  .bp-ticker {
-    background: #ddd;
-    margin-bottom: 16px;
-  }
-
   .bp-components {
 
     @include breakpoint(desktop) {
