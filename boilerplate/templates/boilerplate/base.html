@@ -14,19 +14,18 @@
     {% compress js %}
     {% endcompress %}
 
-    {% compress css inline %}
-    <link rel="stylesheet" href="{% static "boilerplate/css/bootstrap-reboot.css" %}" type="text/css">
-    <link rel="stylesheet" href="{% static "boilerplate/css/boilerplate.scss" %}" type="text/x-scss">
-    {% endcompress %}
-
-    <!-- fontawesome svg - async onload -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" media="none" onload="if(media!=='all')media='all'">
-    <!-- bootstrap 4 - async onload -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" media="none" onload="if(media!=='all')media='all'">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- load bundled boilerplate files using webpack loader - deferred -->
     {% render_bundle 'vendor' attrs='defer' %}
     {% render_bundle 'boilerplate' attrs='defer' %}
+
+    {% compress css inline %}
+    <link rel="stylesheet" href="{% static "boilerplate/css/boilerplate.scss" %}" type="text/x-scss">
+    {% endcompress %}
 
   </head>
   <body>
@@ -76,7 +75,7 @@
               <li><a href="/teaching"><i class="fas fa-link"></i> Teaching</a></li>
               <li><a href="#"><i class="fas fa-link"></i> Item</a></li>
               <li><a href="#"><i class="fas fa-link"></i> Item</a></li>
-              <li><hr role="separator"/></li>
+              <li><hr /></li>
               <li><a href="#"><i class="fas fa-link"></i> Item</a></li>
               <li><a href="#"><i class="fas fa-link"></i> Item</a></li>
             </ul>
