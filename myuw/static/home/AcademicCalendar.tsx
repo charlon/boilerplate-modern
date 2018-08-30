@@ -7,8 +7,7 @@ interface Props {
 }
 
 interface State {
-    loading: boolean;
-    events: [];
+
 }
 
 class AcademicCalendar extends React.Component<Props, State> {
