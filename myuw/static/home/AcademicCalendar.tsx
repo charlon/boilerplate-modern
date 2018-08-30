@@ -2,18 +2,18 @@ import * as React from 'react';
 import { Card, CardText, CardBody,
   CardTitle } from 'reactstrap';
 
-interface IProps {
+interface Props {
 
 }
 
-interface IState {
+interface State {
     loading: boolean;
     events: [];
 }
 
-class AcademicCalendar extends React.Component<IProps, IState> {
+class AcademicCalendar extends React.Component<Props, State> {
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
   }
 
@@ -25,7 +25,7 @@ class AcademicCalendar extends React.Component<IProps, IState> {
 
     return (
       <div>
-        <Card>
+        <Card className="shadow-sm">
           <CardBody>
             <CardTitle>Academic Calender</CardTitle>
             <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>

@@ -3,7 +3,6 @@
 
 h1 { color: $yellow-green; }
 
-
 .myuw-teaching { outline: dashed 1px blue;
 
   @include breakpoint(desktop) {

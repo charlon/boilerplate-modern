@@ -11,12 +11,23 @@ ReactDOM.render(
 
     <div className="myuw-ticker">
       <div className="myuw-ticker-left">
-        <div className="myuw-ticker-card">make a tickker component</div>
+        <div className="myuw-ticker-card">
+          <a href="#"><i class="far fa-grimace"></i> make a <span>tickker component</span></a>
+        </div>
       </div>
       <div className="myuw-ticker-right">
-        <div className="myuw-ticker-card">make a tickker component</div>
-        <div className="myuw-ticker-card">make a tickker component</div>
-        <div className="myuw-ticker-card">make a tickker component</div>
+        <div className="myuw-ticker-card">
+          <a href="#">make a <span>component</span></a>
+        </div>
+        <div className="myuw-ticker-card">
+          <a href="#">make a <span>component</span></a>
+        </div>
+        <div className="myuw-ticker-card">
+          <a href="#">make a <span>component</span></a>
+        </div>
+        <div className="myuw-ticker-card">
+          <a href="#">make a <span>component</span></a>
+        </div>
       </div>
     </div>
 

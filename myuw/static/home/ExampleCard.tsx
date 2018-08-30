@@ -7,7 +7,7 @@ export default class ExampleCard extends React.Component<{}> {
   render() {
     return (
       <div>
-       <Card>
+       <Card className="shadow-sm">
          <CardBody>
            <CardTitle>Card title</CardTitle>
            <CardSubtitle>Card subtitle</CardSubtitle>
