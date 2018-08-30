@@ -5,7 +5,7 @@ import FirstComponent from './FirstComponent';
 import './teaching.scss';
 
 ReactDOM.render(
-<div>
+<div className="myuw-teaching">
   <h1>Hello, Welcome to the first page</h1>
   <FirstComponent/>
 </div>,
