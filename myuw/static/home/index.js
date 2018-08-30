@@ -12,7 +12,7 @@ ReactDOM.render(
     <div className="myuw-ticker">
       <div className="myuw-ticker-left">
         <div className="myuw-ticker-card">
-          <a href="#"><i class="far fa-grimace"></i> make a <span>tickker component</span></a>
+          <a href="#"><i className="far fa-grimace"></i> make a <span>tickker component</span></a>
         </div>
       </div>
       <div className="myuw-ticker-right">
