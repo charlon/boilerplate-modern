@@ -8,19 +8,17 @@ const root = document.getElementById('teaching');
 
 class Teaching extends React.Component<any, any> {
 
-    constructor(props: any){
-        super(props);
-    }
+  constructor(props: any) {
+    super(props);
+  }
 
-    public render() {
-        return (
-
-          <div className="myuw-teaching">
-            <h1>Hello, Welcome to the first page</h1>
-            <FirstComponent/>
-          </div>
-
-      );
+  public render() {
+    return (
+      <div className="myuw-teaching">
+        <h1>Hello, Welcome to the first page</h1>
+        <FirstComponent />
+      </div>
+    );
   }
 }
 
