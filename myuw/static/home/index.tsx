@@ -7,8 +7,6 @@ import ButtonCounter from './ButtonCounter';
 
 import './home.scss';
 
-const root = document.getElementById('home');
-
 class Home extends React.Component<any, any> {
 
   constructor(props: any) {
@@ -53,4 +51,7 @@ class Home extends React.Component<any, any> {
   }
 }
 
-ReactDOM.render(<Home />, root);
+ReactDOM.render(
+  <Home />,
+  document.getElementById("home")
+);

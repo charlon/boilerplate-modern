@@ -4,8 +4,6 @@ import FirstComponent from './FirstComponent';
 
 import './teaching.scss';
 
-const root = document.getElementById('teaching');
-
 class Teaching extends React.Component<any, any> {
 
   constructor(props: any) {
@@ -22,4 +20,7 @@ class Teaching extends React.Component<any, any> {
   }
 }
 
-ReactDOM.render(<Teaching />, root);
+ReactDOM.render(
+  <Teaching />,
+  document.getElementById("teaching")
+);
