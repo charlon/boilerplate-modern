@@ -22,7 +22,7 @@ body { min-width: 320px; }
 
 /** utilities ***/
 
-.u-slide { max-height: 0;   transition: max-height 0.5s ease-in-out; overflow: hidden;
+.u-slide { max-height: 0; transition: max-height 0.5s ease-in-out; overflow: hidden;
   @include breakpoint(desktop) {
     max-height: unset; // unset 0 height to show contents by default on desktop
   }
@@ -161,7 +161,9 @@ body { min-width: 320px; }
   }
   .bp-menu { }
 
-  ul { margin: 0; padding: 0; list-style: none;
+  ul { margin: 3px; padding: 0; list-style: none;
+
+    @include breakpoint(desktop) { margin: 3px; }
 
     li { margin: 0; padding: 0; line-height: 30px; margin-bottom: 10px;
 
