@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { Card, CardText, CardBody,
-  CardTitle, CardSubtitle } from 'reactstrap';
+  CardTitle } from 'reactstrap';
 
-interface State {
+interface IProps {
+
+}
+
+interface IState {
     loading: boolean;
     events: [];
 }
 
-interface Props {
-
-}
-
-export default class AcademicCalendar extends React.Component<Props, State> {
+class AcademicCalendar extends React.Component<IProps, IState> {
 
   constructor(props) {
     super(props);
@@ -37,3 +37,5 @@ export default class AcademicCalendar extends React.Component<Props, State> {
   }
 
 }
+
+export default AcademicCalendar;
