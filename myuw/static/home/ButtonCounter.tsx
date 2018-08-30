@@ -4,7 +4,7 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 
-interface Props {
+export interface Props {
   title: string;
   subtitle: string;
 }
