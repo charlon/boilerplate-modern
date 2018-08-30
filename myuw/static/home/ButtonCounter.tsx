@@ -13,14 +13,12 @@ interface State {
   count: number;
 }
 
-class ButtonCounter extends React.Component<any, any> {
+class ButtonCounter extends React.Component<Props, State> {
 
-  constructor(props: any) {
+  constructor(props: Props) {
     super(props);
     this.state = {
       count: 0,
-      //title: this.props.cardTitle,
-      subtitle: this.props.cardSubTitle
     };
     this.incrementCount = this.incrementCount.bind(this);
   }
@@ -35,8 +33,8 @@ class ButtonCounter extends React.Component<any, any> {
       <div>
         <Card>
           <CardBody>
-            <CardTitle>{this.props.cardTitle}</CardTitle>
-            <CardSubtitle>{this.state.subtitle}</CardSubtitle>
+            <CardTitle>{this.props.title}</CardTitle>
+            <CardSubtitle>{this.props.subtitle}</CardSubtitle>
             <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
             <Button onClick={this.incrementCount}>You clicked me {this.state.count} times.</Button>
           </CardBody>

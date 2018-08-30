@@ -4,8 +4,9 @@ import {
   CardTitle
 } from 'reactstrap';
 
-interface Props {
-
+export interface Props {
+  compiler: string;
+  framework: string;
 }
 
 interface State {
@@ -29,7 +30,7 @@ class AcademicCalendar extends React.Component<Props, State> {
         <Card className="shadow-sm">
           <CardBody>
             <CardTitle>Academic Calender</CardTitle>
-            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+            <CardText>Hello from {this.props.compiler} and {this.props.framework}!</CardText>
           </CardBody>
         </Card>
       </div>
