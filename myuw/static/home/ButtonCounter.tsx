@@ -29,8 +29,6 @@ class ButtonCounter extends React.Component<any, any> {
 
   public render() {
 
-    console.log("button counter rendered!");
-
     return (
       <div>
         <Card>
