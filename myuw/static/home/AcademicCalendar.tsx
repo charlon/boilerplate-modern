@@ -30,8 +30,11 @@ class AcademicCalendar extends React.Component<Props, State> {
     .then(results => {
         return results.json();
       }).then(data => {
+        this.setState({
+          events: data,
+          loading : false
+        });
         console.log(this.state.loading);
-        this.setState({ events: data });
         console.log(this.state.events);
       });
   }
