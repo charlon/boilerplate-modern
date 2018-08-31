@@ -44,10 +44,7 @@ module.exports = {
       filename: './webpack-stats.json'
     }),
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
       filename: "[name]-[hash].css",
-      //chunkFilename: "[id].css"
     })
 
   ],
@@ -70,13 +67,7 @@ module.exports = {
           {
               test: /\.(css|scss)$/,
               use: [
-                {
-                  loader: MiniCssExtractPlugin.loader,
-                  options: {
-                    // you can specify a publicPath here
-                    publicPath: './boilerplate/static/bundles/'
-                  }
-                },
+                MiniCssExtractPlugin.loader,
                 "css-loader",
                 "sass-loader"
               ]
