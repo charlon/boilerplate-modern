@@ -27,3 +27,13 @@ def accounts(request):
         'hello': "vue demo",
     }
     return HttpResponse(template.render(context, request))
+
+
+def calendar_json(request):
+
+    # query the trumba seattle sea_acad calendar json
+    url = 'https://www.trumba.com/calendars/sea_acad-inst.json'
+    req = requests.get(url)
+    events = req.json()
+
+    return JsonResponse(events, safe=False)

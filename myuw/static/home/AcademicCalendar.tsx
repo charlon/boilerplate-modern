@@ -10,17 +10,30 @@ export interface Props {
 }
 
 interface State {
-
+  loading: boolean;
+  events : [];
 }
 
 class AcademicCalendar extends React.Component<Props, State> {
 
   constructor(props: Props) {
     super(props);
+    this.state = {
+      loading: true,
+      events: []
+    };
   }
 
   public componentDidMount() {
 
+    fetch('/calendar.json')
+    .then(results => {
+        return results.json();
+      }).then(data => {
+        console.log(this.state.loading);
+        this.setState({ events: data });
+        console.log(this.state.events);
+      });
   }
 
   public render() {
