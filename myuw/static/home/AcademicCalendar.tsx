@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   Card, CardText, CardBody,
-  CardTitle
+  CardTitle, CardSubtitle
 } from 'reactstrap';
 
 export interface Props {
@@ -46,7 +46,8 @@ class AcademicCalendar extends React.Component<Props, State> {
         <Card className="shadow-sm">
           <CardBody>
             <CardTitle>Academic Calender</CardTitle>
-            <CardText>Hello from {this.props.compiler} and {this.props.framework}!</CardText>
+            <CardSubtitle>Hello from {this.props.compiler} and {this.props.framework}!</CardSubtitle>
+            <CardText>asfdasd asdfasdfas</CardText>
           </CardBody>
         </Card>
       </div>
