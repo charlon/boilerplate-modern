@@ -31,7 +31,7 @@ class AcademicCalendar extends React.Component<Props, State> {
     .then(results => { return results.json() })
     .then(data => {
 
-      let events = data.map((evt) => {
+      let events = data.map((evt: any) => {
         return(
           <li key={evt.eventID}>
             {evt.title}, {evt.eventID}, {evt.permaLinkUrl}
