@@ -32,7 +32,8 @@ def accounts(request):
 def calendar_json(request):
 
     # query the trumba seattle sea_acad calendar json
-    url = 'https://www.trumba.com/calendars/sea_acad-inst.json'
+    # https://www.trumba.com/calendars/sea_acad-cal.json
+    url = 'https://www.trumba.com/calendars/sea_acad-cal.json'
     req = requests.get(url)
     events = req.json()
 

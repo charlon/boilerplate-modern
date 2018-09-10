@@ -31,10 +31,10 @@ class AcademicCalendar extends React.Component<Props, State> {
     .then(results => { return results.json() })
     .then(data => {
 
-      let events = data.map((evt: any) => {
+      let events = data.map((event: any) => {
         return(
-          <li key={evt.eventID}>
-            {evt.title}, {evt.eventID}, {evt.permaLinkUrl}
+          <li key={event.eventID}>
+            {event.title}<br/>{event.startDateTime} - {event.endDateTime}
           </li>
         )
       })
@@ -44,7 +44,7 @@ class AcademicCalendar extends React.Component<Props, State> {
         loading : false
       });
 
-      console.log(this.state.loading);
+      //console.log(this.state.loading);
       console.log(data);
 
     })
@@ -53,8 +53,6 @@ class AcademicCalendar extends React.Component<Props, State> {
     });
 
   }
-  // https://github.com/Lemoncode/react-typescript-samples/tree/master/06%20AJAX%20Call
-  // example typescript
 
   public render() {
 
