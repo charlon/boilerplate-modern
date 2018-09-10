@@ -31,13 +31,21 @@ class AcademicCalendar extends React.Component<Props, State> {
     .then(results => { return results.json() })
     .then(data => {
 
+      let events = data.map((evt) => {
+        return(
+          <li key={evt.eventID}>
+            {evt.title}, {evt.eventID}, {evt.permaLinkUrl}
+          </li>
+        )
+      })
+
       this.setState({
-        events: data,
+        events: events,
         loading : false
       });
 
       console.log(this.state.loading);
-      console.log(this.state.events);
+      console.log(data);
 
     })
     .catch(error => {
@@ -57,11 +65,7 @@ class AcademicCalendar extends React.Component<Props, State> {
     } else {
       content =
       <ul>
-        {this.state.events.map(event => {
-          return (
-            <li>asfddasasd</li>
-          );
-        })}
+        {this.state.events}
       </ul>
     }
 
