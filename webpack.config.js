@@ -61,7 +61,7 @@ module.exports = {
               loader: 'babel-loader',
               query: {
                   babelrc: false,
-                  presets: ['es2015', 'react']
+                  presets: ['react']
               }
           },
           {
