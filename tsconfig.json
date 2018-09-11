@@ -5,6 +5,9 @@
     "jsx": "react",
     "module": "commonjs"
   },
+  "include": [
+    ".d.ts"
+  ],
   "exclude": [
     "node_modules"
   ]

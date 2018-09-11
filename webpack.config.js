@@ -9,7 +9,7 @@ module.exports = {
   context: __dirname,
 
   entry : {
-    boilerplate: './boilerplate/static/boilerplate/js/main',
+    boilerplate: './boilerplate/static/boilerplate/',
     home: './myuw/static/home/',
     teaching: './myuw/static/teaching/',
   },
@@ -71,7 +71,15 @@ module.exports = {
                 "css-loader",
                 "sass-loader"
               ]
-          }
+          },
+          {
+              test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+              use: [
+                  {
+                      loader: 'url-loader',
+                  },
+              ]
+          },
       ]
   },
 

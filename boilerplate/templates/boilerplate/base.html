@@ -26,56 +26,14 @@
     <section>
 
       <header role="banner" class="bp-header">
-        <div class="bp-thin-bar">
-          <div class="bp-container">
-            <div class="bp-user"><i class="fas fa-user"></i>&nbsp;&nbsp;netid</div>
-            <div class="bp-links">
-              <ul>
-                <li><i class="fas fa-external-link-alt"></i> Link</li>
-                <li><i class="fas fa-external-link-alt"></i> Link</li>
-                <li><i class="fas fa-question-circle"></i> Help</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="bp-masthead">
-          <div class="bp-container bp-logo" style="background-image: url({% static "boilerplate/img/w-logo-white.png" %})">
-
-            <div class="bp-title-mobile">
-              <button class="bp-title-button" id="nav_button">
-                <span class="fa-stack fa-2x bp-title-button-icon" aria-hidden="true">
-                  <i class="far fa-square fa-stack-2x"></i>
-                  <i class="fa fa-bars fa-stack-1x"></i>
-                </span>
-              </button>
-              <span>MyApplication</span>
-            </div>
-
-            <div class="bp-title-desktop">MyApplication</div>
-
-          </div>
-        </div>
+        <div id="thin_bar" class="bp-thin-bar"></div>
+        <div id="masthead" class="bp-masthead"></div>
       </header>
 
       <div class="bp-body">
         <div class="bp-container">
 
-          <div id="nav_menu" role="navigation" class="bp-navigation u-slide">
-            <ul class="bp-menu">
-              <li><a href="/" class="u-active"><i class="fas fa-home"></i> Home</a></li>
-              <li><a href="/teaching"><i class="fas fa-link"></i> Teaching</a></li>
-              <li><a href="#"><i class="fas fa-link"></i> Item</a></li>
-              <li><a href="#"><i class="fas fa-link"></i> Item</a></li>
-              <li><hr /></li>
-              <li><a href="#"><i class="fas fa-link"></i> Item</a></li>
-              <li><a href="#"><i class="fas fa-link"></i> Item</a></li>
-            </ul>
-            <div class="bp-welcome">
-              <p>Welcome to Boilerplate Modern!</p>
-            </div>
-          </div>
+          <div id="nav_menu" role="navigation" class="bp-navigation u-slide"></div>
 
           <main role="main" class="bp-main">
             {% block content %}{% endblock %}
