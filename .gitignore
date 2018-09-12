@@ -112,7 +112,4 @@ pyvenv.cfg
 
 # node
 node_modules/
-
-# react + webpack
-bundles/
-webpack-stats.json
+src/**/*.css
