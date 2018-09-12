@@ -36,10 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'webpack_loader',
-    'compressor',
-    'boilerplate',
-    'myuw'
 ]
 
 MIDDLEWARE = [
@@ -128,43 +124,8 @@ STATIC_ROOT = 'boilerplate/static/'
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder',
 )
 
 STATICFILES_DIRS = [
     #os.path.join(BASE_DIR, '..', "react"),
 ]
-
-# webpack loader (react)
-WEBPACK_LOADER = {
-    'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'bundles/',  # /static/bundles
-        'STATS_FILE': os.path.join(BASE_DIR, '..', 'webpack-stats.json'),
-    }
-}
-
-# compressor
-COMPRESS_ROOT = "/some/path/for/files"
-COMPRESS_PRECOMPILERS = (
-    #('text/less', 'lesscpy {infile} {outfile}'),
-    ('text/x-sass', 'sassc {infile} {outfile}'),
-    ('text/x-scss', 'sassc {infile} {outfile}'),
-)
-COMPRESS_ENABLED = True # True if you want to compress your development build
-COMPRESS_OFFLINE = False # True if you want to compress your build offline
-COMPRESS_CSS_FILTERS = [
-    'compressor.filters.css_default.CssAbsoluteFilter',
-    'compressor.filters.cssmin.CSSMinFilter'
-]
-COMPRESS_JS_FILTERS = [
-    'compressor.filters.jsmin.JSMinFilter',
-]
-
-
-# bakery
-
-#BUILD_DIR =  os.path.join(BASE_DIR, '/boilerplate/build/')
-
-#BAKERY_VIEWS = (
-#    'boilerplate.views.IndexTemplateView',
-#)

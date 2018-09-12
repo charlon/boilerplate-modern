@@ -18,5 +18,5 @@ from django.urls import include, path, re_path
 from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
-    path('', include('myuw.urls')),
+    #path('', include('myuw.urls')),
 ]

@@ -17,8 +17,6 @@ setup(
     install_requires=[
         'setuptools',
         'django',
-        'django_compressor',
-        'django-webpack-loader',
         'requests',
         'libsass',
         'ujson'
