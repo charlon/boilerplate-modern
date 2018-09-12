@@ -112,4 +112,4 @@ pyvenv.cfg
 
 # node
 node_modules/
-src/**/*.css
+*.css
