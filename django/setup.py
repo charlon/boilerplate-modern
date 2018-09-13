@@ -17,6 +17,7 @@ setup(
     install_requires=[
         'setuptools',
         'django',
+        'django-cors-headers',
         'requests',
         'libsass',
         'ujson'
