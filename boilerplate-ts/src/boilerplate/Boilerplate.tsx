@@ -10,10 +10,10 @@ import './boilerplate.css';
 class Boilerplate extends React.Component<{}> {
 
   public slideMenu() {
-      const element = document.getElementById("nav_menu");
-      if (element) {
-        element.classList.toggle("u-slide-down");
-      }
+    const element = document.getElementById("nav_menu");
+    if (element) {
+      element.classList.toggle("u-slide-down");
+    }
   }
 
   public render() {
