@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-// import AcademicCalendar from './AcademicCalendar';
+import AcademicCalendar from './AcademicCalendar';
 import ButtonCounter from './ButtonCounter';
 import ExampleCard from './ExampleCard';
 
@@ -42,7 +42,7 @@ class Home extends React.Component<any, any> {
           <ExampleCard />
           <ButtonCounter title="Button Counter" subtitle="Click the Button for stuff!" />
           <ExampleCard />
-          {/*<AcademicCalendar compiler="TypeScript" framework="React" />*/}
+          <AcademicCalendar compiler="TypeScript" framework="React" />
         </div>
 
       </div>

@@ -31,7 +31,7 @@ class AcademicCalendar extends React.Component<IProps, IState> {
     .then(results => results.json())
     .then(data => {
 
-      const events = data.map((event: any) => {
+      const eventsList = data.map((event: any) => {
         return(
           <li key={event.eventID}>
             {event.title}<br/>{event.startDateTime} - {event.endDateTime}
@@ -40,7 +40,7 @@ class AcademicCalendar extends React.Component<IProps, IState> {
       })
 
       this.setState({
-        events: events,
+        events: eventsList,
         loading : false
       });
 
@@ -48,8 +48,9 @@ class AcademicCalendar extends React.Component<IProps, IState> {
       // console.log(data);
 
     })
-    .catch(() => {
-      });
+    .catch(error => {
+      return ( <div>Error... {error}</div>)
+    });
 
   }
 
