@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Route, Switch} from 'react-router-dom';
 
 import Boilerplate from './boilerplate/Boilerplate';
-import Home from './pages/home/Home'
-import Teaching from './pages/Teaching'
+import Home from './myuw/home/Home'
+import Teaching from './myuw/Teaching'
 
 const App = () => (
   <Boilerplate>
