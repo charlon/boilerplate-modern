@@ -1,21 +1,20 @@
 import * as React from 'react';
 import {
-  Card, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  Button, Card, CardBody, CardSubtitle, CardText, CardTitle
 } from 'reactstrap';
 
-export interface Props {
+export interface IProps {
   title: string;
   subtitle: string;
 }
 
-interface State {
+interface IState {
   count: number;
 }
 
-class ButtonCounter extends React.Component<Props, State> {
+class ButtonCounter extends React.Component<IProps, IState> {
 
-  constructor(props: Props) {
+  constructor(props: IProps) {
     super(props);
     this.state = {
       count: 0,

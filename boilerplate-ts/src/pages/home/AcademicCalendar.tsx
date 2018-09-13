@@ -44,13 +44,12 @@ class AcademicCalendar extends React.Component<IProps, IState> {
         loading : false
       });
 
-      //console.log(this.state.loading);
-      console.log(data);
+      // console.log(this.state.loading);
+      // console.log(data);
 
     })
-    .catch(error => {
-      console.log(error);
-    });
+    .catch(() => {
+      });
 
   }
 

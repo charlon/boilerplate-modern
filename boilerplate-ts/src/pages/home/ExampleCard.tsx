@@ -1,12 +1,11 @@
 import * as React from 'react';
 import {
-  Card, CardText, CardBody,
-  CardTitle, CardSubtitle
+  Card, CardBody, CardSubtitle, CardText, CardTitle
 } from 'reactstrap';
 
 class ExampleCard extends React.Component<{}> {
 
-  render() {
+  public render() {
     return (
       <div>
         <Card className="shadow-sm">
