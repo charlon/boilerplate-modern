@@ -16,9 +16,9 @@ services:
 
   react:
     build: ./boilerplate-ts
-    command: ["npm", "start"]
     volumes:
       - ./boilerplate-ts:/app/boilerplate-ts
       - /app/boilerplate-ts/node_modules
     ports:
       - "3000:3000"
+    command: ["npm", "start"]

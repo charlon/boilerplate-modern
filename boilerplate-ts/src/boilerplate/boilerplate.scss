@@ -113,7 +113,8 @@ body { min-width: 320px; }
       .bp-container {
         padding-top: 32px;
         display: flex;
-        flex-wrap: wrap;
+      align-items: flex-start;
+      align-content: flex-start;
       }
     }
 
@@ -169,7 +170,7 @@ body { min-width: 320px; }
 
 
 /** main section **/
-.bp-main {
+.bp-main { 
 
    min-height: calc(100vh - 105px); // bp-thin-bar + bp-navigation height
 

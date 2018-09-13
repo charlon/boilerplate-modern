@@ -4,7 +4,7 @@ import AcademicCalendar from './AcademicCalendar';
 import ButtonCounter from './ButtonCounter';
 import ExampleCard from './ExampleCard';
 
-import './home.scss';
+import './home.css';
 
 class Home extends React.Component<any, any> {
 
