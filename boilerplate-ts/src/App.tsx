@@ -4,6 +4,7 @@ import { Route, Switch} from 'react-router-dom';
 import './App.css';
 
 // import logo from './logo.svg';
+// import Boilerplate from './layout/Boilerplate';
 
 import Home from './pages/Home'
 import Teaching from './pages/Teaching'
