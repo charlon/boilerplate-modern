@@ -3,7 +3,7 @@ import { Route, Switch} from 'react-router-dom';
 
 import './App.css';
 import Boilerplate from './boilerplate/Boilerplate';
-import Home from './pages/Home'
+import Home from './pages/home/Home'
 import Teaching from './pages/Teaching'
 
 const App = () => (
