@@ -1,4 +1,5 @@
 import * as React from 'react';
+// import logo from './logo.svg';
 
 class Boilerplate extends React.Component<{}> {
 

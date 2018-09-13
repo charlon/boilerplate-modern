@@ -5,14 +5,11 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 
-import Boilerplate from './layout/Boilerplate';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
   <BrowserRouter>
-    <Boilerplate>
-      <App />
-    </Boilerplate>
+    <App />
   </BrowserRouter>,
   document.getElementById('root') as HTMLElement
 );
