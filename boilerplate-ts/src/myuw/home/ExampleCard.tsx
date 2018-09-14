@@ -27,6 +27,7 @@ class ExampleCard extends React.Component<IProps, IState> {
   }
 
   public componentWillMount() {
+    // https://stackoverflow.com/questions/30803440/delayed-rendering-of-react-components
     setTimeout(() => {
         this.showComponent();
     }, this.props.wait);
