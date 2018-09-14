@@ -16,7 +16,7 @@ class ExampleCard extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      hidden: 'd-none',
+      hidden: 'invisible',
     };
   }
 
