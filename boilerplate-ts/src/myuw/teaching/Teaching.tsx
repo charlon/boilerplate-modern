@@ -1,8 +1,7 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import FirstComponent from './FirstComponent';
 
-import './teaching.scss';
+import './teaching.css';
 
 class Teaching extends React.Component<any, any> {
 
@@ -19,8 +18,4 @@ class Teaching extends React.Component<any, any> {
     );
   }
 }
-
-ReactDOM.render(
-  <Teaching />,
-  document.getElementById("teaching")
-);
+export default Teaching
