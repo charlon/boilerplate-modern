@@ -15,10 +15,10 @@ services:
     command: bash -c "python manage.py migrate --settings=sampleproj.settings.local && python manage.py runserver 0.0.0.0:8000 --settings=sampleproj.settings.local"
 
   react:
-    build: ./boilerplate-ts
+    build: ./react-ts
     volumes:
-      - ./boilerplate-ts:/app/boilerplate-ts
-      - /app/boilerplate-ts/node_modules
+      - ./react-ts:/app/react-ts
+      - /app/react-ts/node_modules
     ports:
       - "3000:3000"
     command: ["npm", "start"]
