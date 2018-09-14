@@ -1,6 +1,9 @@
 import * as React from 'react';
 import * as logo from './w-logo-white.png';
 
+import NavMenu from './NavMenu';
+import WelcomeBox from './WelcomeBox';
+
 const mastStyle = {
   backgroundImage: `url(${logo})`
 }
@@ -55,18 +58,8 @@ class Boilerplate extends React.Component<{}> {
           <div className="bp-container">
 
             <div id="nav_menu" role="navigation" className="bp-navigation u-slide">
-              <ul className="bp-menu">
-                <li><a href="/" className="u-active"><i className="fas fa-home" /> Home</a></li>
-                <li><a href="/teaching"><i className="fas fa-link" /> Teaching</a></li>
-                <li><a href="#"><i className="fas fa-link" /> Item</a></li>
-                <li><a href="#"><i className="fas fa-link" /> Item</a></li>
-                <li><hr /></li>
-                <li><a href="#"><i className="fas fa-link" /> Item</a></li>
-                <li><a href="#"><i className="fas fa-link" /> Item</a></li>
-              </ul>
-              <div className="bp-welcome">
-                <p>Welcome to Boilerplate Modern!</p>
-              </div>
+              <NavMenu />
+              <WelcomeBox />
             </div>
 
             <main role="main" className="bp-main">
