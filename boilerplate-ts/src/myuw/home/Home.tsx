@@ -39,9 +39,9 @@ class Home extends React.Component<any, any> {
         </div>
 
         <div className="myuw-home">
-          <ExampleCard />
+          <ExampleCard wait={1000} />
           <ButtonCounter title="Button Counter" subtitle="Click the Button for stuff!" />
-          <ExampleCard />
+          <ExampleCard wait={1300} />
           <AcademicCalendar compiler="TypeScript" framework="React" />
         </div>
 

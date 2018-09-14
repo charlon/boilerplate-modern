@@ -3,11 +3,38 @@ import {
   Card, CardBody, CardSubtitle, CardText, CardTitle
 } from 'reactstrap';
 
-class ExampleCard extends React.Component<{}> {
+export interface IProps {
+  wait: number;
+}
+
+interface IState {
+  hidden: string;
+}
+
+class ExampleCard extends React.Component<IProps, IState> {
+
+  constructor(props: IProps) {
+    super(props);
+    this.state = {
+      hidden: 'd-none',
+    };
+  }
+
+  public showComponent() {
+    this.setState({
+      hidden : ''
+    });
+  }
+
+  public componentWillMount() {
+    setTimeout(() => {
+        this.showComponent();
+    }, this.props.wait);
+  }
 
   public render() {
     return (
-      <div>
+      <div className={this.state.hidden}>
         <Card className="shadow-sm">
           <CardBody>
             <CardTitle>Card title</CardTitle>
