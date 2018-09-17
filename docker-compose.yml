@@ -1,16 +1,24 @@
 version: '3'
 
 services:
-  app:
+
+  django:
     restart: always
-    build: .
+    build: ./django
     # map the local (host) directories to their container counterparts
     # to support live-syncing
     volumes:
-      - ./sampleproj:/app/sampleproj
-      - ./boilerplate:/app/boilerplate
-      - ./myuw:/app/myuw
-      - ./webpack-stats.json:/app/webpack-stats.json
+      - ./django/sampleproj:/app/django/sampleproj
+      - ./django/api:/app/django/api
     ports:
       - "8000:8000"
     command: bash -c "python manage.py migrate --settings=sampleproj.settings.local && python manage.py runserver 0.0.0.0:8000 --settings=sampleproj.settings.local"
+
+  react:
+    build: ./react-ts
+    volumes:
+      - ./react-ts:/app/react-ts
+      - /app/react-ts/node_modules
+    ports:
+      - "3000:3000"
+    command: ["npm", "start"]
